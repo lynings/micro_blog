@@ -108,6 +108,7 @@ ol, ul{
     height: 46px;
     line-height: 1;
     padding: 0 14px 0 4px;
+    color: inherit;
 }
 .Icon--home:before {
     content: "\f053";
