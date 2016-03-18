@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.UserDAO">
+
+    <!--&lt;!&ndash;按主键取记录&ndash;&gt;-->
+    <!--<select id = "selectPk" parameterType="java.util.Map" resultMap = "objects">-->
+        <!--select-->
+        <!--<include refid = "tableProperty"/>-->
+        <!--From wx_user_info-->
+        <!--where wx_user_info.id = #{id}-->
+    <!--</select>-->
+    <!--&lt;!&ndash;更新列表&ndash;&gt;-->
+    <!--<update id = "update" parameterType="com.locision.system.pojo.WeiXinAccount">-->
+        <!--update wx_user_info-->
+        <!--<set>-->
+            <!--<if test="nickName !=null"> nickname=#{nickName},</if>-->
+            <!--<if test="sex !=null"> sex=#{sex},</if>-->
+            <!--<if test="accountExecTime !=null"> createdate=#{accountExecTime},</if>-->
+            <!--<if test="remark !=null">remark =#{remark},</if>-->
+        <!--</set>-->
+        <!--<where>-->
+            <!--<if test="id != null">id=#{id}</if>-->
+        <!--</where>-->
+    <!--</update>-->
+    <!--<resultMap type = "com.locision.system.pojo.WeiXinAccount" id = "objects">-->
+        <!--<result property = "id" column = "id" jdbcType="VARCHAR" />-->
+        <!--<result property = "nickName" column = "nickname" jdbcType="VARCHAR"/>-->
+        <!--<result property = "sex" column="sex" jdbcType="VARCHAR"/>-->
+        <!--<result property = "accountExecTime" column = "createdate" jdbcType="VARCHAR" />-->
+        <!--<result property = "remark" column = "remark" jdbcType="VARCHAR"/>-->
+    <!--</resultMap>-->
+    <!--<sql id = "tableProperty">-->
+        <!--wx_user_info.id as id,-->
+        <!--wx_user_info.nickname as nickname,-->
+        <!--wx_user_info.sex as sex,-->
+        <!--DATE_FORMAT(wx_user_info.createdate,'%Y-%m-%d') as createdate,-->
+        <!--wx_user_info.remark as remark-->
+    <!--</sql>-->
+    <!--<select id="select" resultMap="objects">-->
+        <!--SELECT-->
+        <!--<include refid="tableProperty"/>-->
+        <!--FROM wx_user_info-->
+        <!--where wx_user_info.status<![CDATA[>]]>0-->
+    <!--</select>-->
+
+</mapper>

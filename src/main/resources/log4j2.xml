@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="10">
+    <properties>
+        <!--<property name="log-path">/Users/zpf/logs</property>-->
+        <property name="log-path">/Users/feng/logs</property>
+        <property name="log-pattern-1">%d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %l %m%n</property>
+        <property name="log-pattern-2">[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n</property>
+    </properties>
+    <appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${log-pattern-1}"/>
+        </Console>
+        <RollingFile name="file-log" fileName="${log-path}/web.log"
+                     filePattern="${log-path}/recycling-api-%d{yyyy-MM-dd}.log">
+
+            <CustomJsonLayout charset="UTF-8"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingFile>
+    </appenders>
+
+    <loggers>
+        <root level="error">
+            <appender-ref ref="console"/>
+         </root>
+        <logger name="org.apache" level="info">
+            <appender-ref ref="file-log"/>
+            <appender-ref ref="console"/>
+        </logger>
+        <logger name="com.blog.dao" level="debug">
+            <appender-ref ref="console"/>
+            <appender-ref ref="file-log"/>
+        </logger>
+        <!--<logger name="com.blog.dao" level="debug">-->
+            <!--<appender-ref ref="console"/>-->
+            <!--<appender-ref ref="file-log"/>-->
+        <!--</logger>-->
+    </loggers>
+
+</Configuration>
