@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>微博</title>
+	<meta KeyWord="micro blog" content="micro blog"/>
+	<link rel="stylesheet" href="css/new_index.css">
+</head>
+
+<body>
+	<header>
+		<!-- 顶部导航 start-->
+		<div class="global-topbar">
+			<!--容器 start -->
+			<div class="top-container">
+				<!-- 顶部左边按钮 start-->
+				<div class="nav top-nav-left">
+					<ul class="nav-left" id="global-action">
+						<li class="active">
+							<a href="#">
+								<span class="icon--home icon--large icon"></span>
+								<span class="text">主页</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon--notifications icon--large icon"></span>
+								<span class="text">通知</span>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<span class="icon--dm icon--large icon"></span>
+								<span class="text">私信</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!-- 顶部左边按钮 end-->
+
+				<!-- 顶部右边按钮 start-->
+				<div class="nav top-nav-right">
+					<div class="search">
+						<form action="#" method="post">
+							<input type="text" name="search" id="form-search" placeholder="搜索" />
+							<span class="search-btn">
+								<button type="submit" class="icon--search nav-search icon white-border-btn"/>
+							</span>
+						</form>
+					</div>
+					<ul class="nav right-actions">
+						<li>
+							<a href="#"><img class="me-btn" src="img/default_profile_5_normal.png" /></a>
+						</li>
+						<li>
+							<button type="button" class="send-btn blue">发推</button>
+						</li>
+					</ul>
+				</div>
+				<!-- 顶部右边按钮 end-->
+
+				<!-- logo -->
+				<div class="nav logo">
+					<a href="#" >
+						<img class="logo-tuniu" src="img/iconfont-tuniu.png"/>
+					</a>
+				</div>
+			</div>
+			<!--容器 start -->
+		</div>
+		<!-- 顶部导航 end-->
+	</header>
+	<!-- 底部最外层div start -->
+	<div class="global-bottom-outer">
+		<!-- 底部容器 start-->
+		<div class="bottom-container">
+			<!-- 左边内容 -->
+			<div class="bottom-left content-inner">
+				<div class="user-container">
+					<div class="user-top"></div>
+					<!-- 照相机位置 start -->
+					<div id="take-photo">
+						<img class="take-photo-img" src="img/iconfont-qunfengtouxiang.png"/>
+					</div>
+					<!-- 照相机位置 end -->
+
+					<div class="user-bottom">
+						<!-- 用户信息 start -->
+						<div class="user-info">
+							<div id="username">还差得远呢</div>
+							<span id="email">@lyning</span>
+						</div>
+						<div class="myself-msg">
+							<ul class="myself-list">
+								<li>
+									<div class="msg">推文</div>
+									<a href="#"><div class="msg-color">10</div></a>
+								</li>
+								<li>
+									<div class="msg">正在关注</div>
+									<a href="#"><div class="msg-color">12</div></a>
+								</li>
+								<li>
+									<div class="msg">关注者</div>
+									<a href="#"><div class="msg-color">30</div></a>
+								</li>
+							</ul>
+						</div>
+						<!-- 用户信息 end -->
+					</div>
+				</div>
+				<div class="relative-msg radius_b">
+					<div class="relative-inner">
+						<p class="hot-title">热门
+							<a href="#" id="relative-change" class="msg-color msg" style="margin-left: 5px">更改</a>
+						</p>
+						<div class="search-relative">
+							<ul class="relative-list">
+								<li><a href="#">阿斯顿赋阿斯顿赋</a></li>
+								<li><a href="#">阿斯顿赋阿斯顿赋</a></li>
+								<li><a href="#">阿斯顿赋阿斯顿赋</a></li>
+								<li><a href="#">魔法攻击魔法攻击</a></li>
+								<li><a href="#">阿斯顿赋阿斯顿赋</a></li>
+								<li><a href="#">阿斯顿赋阿斯顿赋</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 主要内容 -->
+			<div id="main" class="content-inner">
+				<!-- 发送说说框 start -->
+				<div class="user-box">
+					<div class="user-home-img">
+						<a href="#"><img class="me-btn" src="img/default_profile_5_normal.png" /></a>
+					</div>
+					<div class="user-send-box">
+						<form action="#" method="post">
+							<input type="text" id="user-send-content" name="content" placeholder="有什么新鲜事情吗？">
+							<div class="send-photo-outer">
+								<a href="#">
+									<img class="send-photo" src="img/iconfont-qunfengtouxiang.png" title="拍照"/>
+								</a>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="user-content">
+					<ul class="relative-list">
+						<li>
+							<!-- 关注者发布的信息 start -->
+							<div class="attention-info-box">
+								<div class="attention-info-inner attention-info">
+									<div class="attention-photo">
+										<a href="#">
+											<img class="attention-img" src="img/DYnmVOih_bigger.jpeg"/>
+										</a>
+									</div>
+									<div class="attention-content">
+										<div class="attention-inner">
+											<a href="#">
+												<span class="attention-name" class="attention-msg">Lyning</span>
+											</a>
+											<span class="attention-msg">icon</span>
+											<span class="attention-msg">@Lyning</span>
+										</div>
+										<div class="attention-push-msg attention-inner">
+											<span>This is me now!!! This is me now!!!
+												  This is me now!!! This is me now!!!
+												  This is me now!!! This is me now!!!
+												  This is me now!!! This is me now!!!
+												  This is me now!!! This is me now!!!
+											</span>
+										</div>
+									</div>
+									<span class="icon icon--translator msg" title="查看翻译"></span>
+									<div class="attention-img-box">
+										<div class="stream-item-footer myself-msg">
+											<ul class="myself-list">
+												<li>
+
+													<a href="#">
+														<span class="icon icon--reply def-color" title="回复"></span>
+													</a>
+												</li>
+												<li>
+
+													<a href="#">
+														<span class="icon icon--retweet def-color" title="转发"></span>
+														<span class="def-color counts">3</span>
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--love def-color" title="喜欢">
+															<span class="def-color counts" style="margin-left: 25px;">45</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--dots def-color"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 关注者发布的信息 end -->
+						</li>
+						<li>
+							<!-- 关注者发布的信息 start -->
+							<div class="attention-info-box">
+								<div class="attention-info-inner attention-info">
+									<div class="attention-photo">
+										<a href="#">
+											<img class="attention-img" src="img/SMmZLt2Y_bigger.jpeg"/>
+										</a>
+									</div>
+									<div class="attention-content">
+										<div class="attention-inner">
+											<a href="#">
+												<span class="attention-name" class="attention-msg">Lyning</span>
+											</a>
+											<span class="attention-msg">icon</span>
+											<span class="attention-msg">@Lyning</span>
+										</div>
+										<div class="attention-push-msg attention-inner">
+											<span>Chrome (Canary) DevTools will now show User Timing measures in the timeline - woot! give it a try. </span>
+										</div>
+									</div>
+									<span class="icon icon--translator msg" title="查看翻译"></span>
+									<div class="attention-img-box">
+										<img class="attention-upload-img" src="img/CZWhz3UU8AAR0du.jpg" />
+										<div class="stream-item-footer myself-msg">
+											<ul class="myself-list">
+												<li>
+
+													<a href="#">
+														<span class="icon icon--reply def-color" title="回复"></span>
+													</a>
+												</li>
+												<li>
+
+													<a href="#">
+														<span class="icon icon--retweet def-color" title="转发"></span>
+														<span class="def-color counts">3</span>
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--love def-color" title="喜欢">
+															<span class="def-color counts" style="margin-left: 25px;">45</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--dots def-color"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 关注者发布的信息 end -->
+						</li>
+						<li>
+							<!-- 关注者发布的信息 start -->
+							<div class="attention-info-box">
+								<div class="attention-info-inner attention-info">
+									<div class="attention-photo">
+										<a href="#">
+											<img class="attention-img" src="img/krioBcV7_bigger.jpg"/>
+										</a>
+									</div>
+									<div class="attention-content">
+										<div class="attention-inner">
+											<a href="#">
+												<span class="attention-name" class="attention-msg">Lyning</span>
+											</a>
+											<span class="attention-msg">icon</span>
+											<span class="attention-msg">@Lyning</span>
+										</div>
+										<div class="attention-push-msg attention-inner">
+											<span>This is me now</span>
+										</div>
+									</div>
+									<span class="icon icon--translator msg" title="查看翻译"></span>
+									<div class="attention-img-box">
+										<img class="attention-upload-img" src="img/kT-6MXpFkSo2v73C.jpg" />
+										<div class="stream-item-footer myself-msg">
+											<ul class="myself-list">
+												<li>
+
+													<a href="#">
+														<span class="icon icon--reply def-color" title="回复"></span>
+													</a>
+												</li>
+												<li>
+
+													<a href="#">
+														<span class="icon icon--retweet def-color" title="转发"></span>
+														<span class="def-color counts">3</span>
+
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--love def-color" title="喜欢">
+															<span class="def-color counts" style="margin-left: 25px;">45</span>
+														</span>
+													</a>
+												</li>
+												<li>
+													<a href="#">
+														<span class="icon icon--dots def-color"></span>
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- 关注者发布的信息 end -->
+						</li>
+					</ul>
+				</div>
+				<!-- 发送说说框 end -->
+			</div>
+			<!-- 右边内容 -->
+			<div class="bottom-right content-inner">
+				<div class="attention radius_b">
+					<div class="relative-inner">
+						<p class="hot-title">推荐关注
+							<a href="#" class="msg-color msg" style="margin-left: 5px">刷新</a>
+							<a href="#" class="msg-color msg" style="margin-left: 5px">查看全部</a>
+						</p>
+						<div class="search-relative">
+							<ul class="relative-list">
+								<li>
+									<div class="attention-info">
+										<div class="attention-photo">
+											<a href="#">
+												<img class="attention-img" src="img/krioBcV7_bigger.jpg"/>
+											</a>
+										</div>
+										<div class="attention-content">
+											<div class="attention-inner">
+												<a href="#">
+													<span class="attention-name" class="attention-msg">Lyning</span>
+												</a>
+												<span class="attention-msg">icon</span>
+												<span class="attention-msg">@Lyning</span>
+											</div>
+											<div class="attention-inner">
+												<button type="button" class="attention-btn blue">关注</button>
+												<span class="attention-msg" style="margin-left: 5px">icon推荐</span>
+											</div>
+										</div>
+										<div style="float: right; cursor: pointer" class="attention-msg">x</div>
+									</div>
+								</li>
+								<li>
+									<div class="attention-info">
+										<div class="attention-photo">
+											<a href="#">
+												<img class="attention-img" src="img/SMmZLt2Y_bigger.jpeg"/>
+											</a>
+										</div>
+										<div class="attention-content">
+											<div class="attention-inner">
+												<a href="#">
+													<span class="attention-name" class="attention-msg">Lyning</span>
+												</a>
+												<span class="attention-msg">icon</span>
+												<span class="attention-msg">@Lyning</span>
+											</div>
+											<div class="attention-inner">
+												<button type="button" class="attention-btn blue">关注</button>
+											</div>
+										</div>
+										<div style="float: right; cursor: pointer" class="attention-msg">x</div>
+									</div>
+								</li>
+								<li>
+									<div class="attention-info">
+										<div class="attention-photo">
+											<a href="#">
+												<img class="attention-img" src="img/DYnmVOih_bigger.jpeg"/>
+											</a>
+										</div>
+										<div class="attention-content">
+											<div class="attention-inner">
+												<a href="#">
+													<span class="attention-name" class="attention-msg">Lyning</span>
+												</a>
+												<span class="attention-msg">icon</span>
+												<span class="attention-msg">@Lyning</span>
+											</div>
+											<div class="attention-inner">
+												<button type="button" class="attention-btn blue">关注</button>
+											</div>
+										</div>
+										<div style="float: right; cursor: pointer" class="attention-msg">x</div>
+									</div>
+								</li>
+							</ul>
+							<a href="#" class="msg-color msg" style="margin-left: 5px">查看好友</a>
+						</div>
+					</div>
+				</div>
+				<div class="relative-blog radius_b">微博相关</div>
+			</div>
+		</div>
+		<!-- 底部容器 end-->
+	</div>
+	<!-- 底部最外层div end -->
+</body>
+
+</html>
