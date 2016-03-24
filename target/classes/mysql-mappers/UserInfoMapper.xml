@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.UserInfoDAO">
+
+    <sql id="tableProperty">
+        mb_user_info.id as id,
+        mb_user_info.name as name,
+        mb_user_info.username as username,
+        mb_user_info.password as password,
+        mb_user_info.sex as sex,
+        mb_user_info.birth as birth,
+        mb_user_info.image as image,
+        mb_user_info.status as status,
+        mb_user_info.create_date as createDate
+    </sql>
+
+    <!--增加-->
+    <insert id="insert" parameterType="com.blog.model.UserInfo" useGeneratedKeys="true">
+        INSERT INTO mb_user_info (name, username, password) VALUES (#{name}, #{username}, #{password});
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        DELETE FROM mb_user_info WHERE id = #{id};
+    </delete>
+
+    <!--登录-->
+    <select id = "login" resultType="com.blog.model.UserInfo">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_info
+        WHERE username = #{username} AND password = #{password}
+    </select>
+
+    <!--按主键取记录-->
+    <select id = "selectPk" parameterType="java.lang.Long" resultType="com.blog.model.UserInfo">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_info
+        WHERE id = #{id}
+    </select>
+
+    <!--所有记录-->
+    <select id="select" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_info
+    </select>
+
+    <!--所有记录-->
+    <select id="selectParam" parameterType="java.util.Map" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_info
+        <where>
+            <if test="id != null"> id = #{id}</if>
+            <if test="name != null"> name = #{name}</if>
+            <if test="username != null">username = #{username}</if>
+            <if test="password != null"> password = #{password}</if>
+            <if test="birth != null"> birth = #{birth}</if>
+            <if test="status != null">status = #{status}</if>
+            <if test="createDate != null">createDate = #{createDate}</if>
+            <if test="sex != null">sex = #{sex}</if>
+        </where>
+    </select>
+
+    <!--更新列表-->
+    <update id = "update" parameterType="com.blog.model.UserInfo">
+        UPDATE mb_user_info
+        <set>
+            <if test="sex != null"> sex = #{sex},</if>
+            <if test="birth != null"> birth = #{birth},</if>
+            <if test="image != null">image = #{image},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="password != null">password = #{password},</if>
+            <if test="name != null"> name = #{name}</if>
+        </set>
+        <where>
+            <if test="id != null">id=#{id}</if>
+        </where>
+    </update>
+
+
+
+</mapper>
