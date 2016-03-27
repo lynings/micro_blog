@@ -7,8 +7,8 @@ package com.blog.model;
 public class MessageRelation implements java.io.Serializable {
 
     private Long id;
-    private Long[] mid;       // 信息推送者Id
-    private Long[] sid;       // 选择人ID
+    private Long mid;       // 信息推送者Id
+    private Long sid;       // 选择人ID
     private Integer type;   // 类型(1:转发; 2:喜欢)
     private Integer status; // 状态(0:已读; 1:未读)
 
@@ -20,19 +20,19 @@ public class MessageRelation implements java.io.Serializable {
         this.id = id;
     }
 
-    public Long[] getMid() {
+    public Long getMid() {
         return mid;
     }
 
-    public void setMid(Long[] mid) {
+    public void setMid(Long mid) {
         this.mid = mid;
     }
 
-    public Long[] getSid() {
+    public Long getSid() {
         return sid;
     }
 
-    public void setSid(Long[] sid) {
+    public void setSid(Long sid) {
         this.sid = sid;
     }
 

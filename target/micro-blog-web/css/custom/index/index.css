@@ -1,0 +1,213 @@
+html, body {
+    height: 100%;
+}
+body {
+    background-color: #f5f8fa;
+    color: #292f33;
+    font-size: 16px;
+    line-height: 18px;
+    overflow-y: scroll;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0;
+}
+ul, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a , a:hover, a:active, a:focus, a:visited{
+    text-decoration: none;
+}
+
+div {
+    border: 0px solid black;
+}
+
+/* index top bar start */
+
+#indexTopBar {
+    min-width: 890px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    background: #fff;
+}
+
+.top-bar-container {
+    border-bottom: 2px solid #e1e8ed;
+}
+
+#indexTopBar .content {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.button-list {
+    padding-top: 20px;
+    text-align: right;
+}
+
+.index-top-bg {
+    background-image: url(../../../images/index-top-bg.png);
+    width: 100%;
+    height: 70px;
+    background-size: 100%;
+    background-position: center;
+    z-index: -1;
+    transition: height 300ms linear;
+}
+
+.img {
+    height: 180px;
+}
+
+.logo {
+    float: left;
+    position: relative;
+    left: 48%;
+}
+
+/* logo */
+.logo-tuniu {
+    width: 38px;
+    height: 38px;
+}
+
+.login-register button {
+    background: #38CB99;
+    color: #fff;
+    padding: 10px 35px;
+    margin-left: 8px;
+    border: 1px solid #fff;
+}
+
+.login-register > button:hover {
+    background: #fff;
+    color: #1da1f2;
+    border: 1px solid transparent;
+}
+
+.topbar-content h2 {
+    padding: 5px;
+    margin: 0;
+    font-size: 32px;
+    color: #fff;
+}
+
+.topbar-content p {
+    color: #fff;
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 28px;
+    opacity: .7;
+    -ms-filter: "alpha(opacity=70)";
+    transition: opacity 300ms linear;
+}
+
+/* 登录弹出框 */
+.customBox {
+    margin: 0 auto;
+    background: #fff;
+    -webkit-border-radius: .5em;
+    -moz-border-radius: .5em;
+    border-radius: .5em;
+}
+
+#loginBox {
+    min-width: 400px;
+    width: 36%;
+    min-height: 380px;
+    height: 36%;
+}
+
+#registerBox {
+    min-width: 400px;
+    width: 36%;
+    min-height: 380px;
+    height: 36%;
+}
+
+#registerBox {
+    min-width: 400px;
+    width: 36%;
+}
+
+.modal-title {
+    margin: 0 auto;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 22px;
+    color: #8899a6;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.login-form {
+    width: 70%;
+    margin: 40px auto;
+}
+
+.login-form .input-group {
+    width: 100%;
+    margin-top: 12px;
+    font-size: 13px;
+}
+
+input.form-control {
+    -webkit-border-radius: .5em !important;
+    -moz-border-radius: .5em !important;
+    border-radius: .5em !important;
+}
+
+.customBtn {
+    padding: 10px 44%;
+}
+
+/* 覆盖bootstrap插件效果 */
+.modal {
+    top: 20% !important;
+    overflow: hidden;
+    overflow-y: hidden;
+}
+
+#topNav {
+    height: 60px;
+    background: #fff;
+    position: relative;
+    z-index: 100;
+    width: 95%;
+    margin: auto;
+}
+
+#topNav li {
+    float: left;
+    width: 12.5%;
+    cursor: pointer;
+    border-right: 1px solid #e1e8ed;
+}
+
+#topNav li a {
+    padding: 20px;
+    display: block;
+}
+
+#topNav li:first-child {
+    border-bottom: 5px solid #1da1f2;
+    transition: border-width 100ms;
+}
+#topNav li:last-child {
+    border-right: 0;
+}
+
+#topNav li:hover {
+    border-bottom: 5px solid #1da1f2;
+    transition: border-width 100ms;
+}
+
+#topNav li:focus {
+    border-bottom: 5px solid #1da1f2;
+    transition: border-width 100ms;
+}
+

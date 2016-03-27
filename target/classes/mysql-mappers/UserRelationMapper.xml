@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.UserRelationDAO">
+
+    <sql id="tableProperty">
+        mb_user_relation.id as id,
+        mb_user_relation.uid as uid,
+        mb_user_relation.type as type,
+        mb_user_relation.worship_id as worship_id
+    </sql>
+
+    <!--增加-->
+    <insert id="insert" parameterType="com.blog.model.UserRelation" useGeneratedKeys="true">
+        INSERT INTO mb_user_relation (uid, type, worship_id) VALUES (#{uid}, #{type}, #{worship_id});
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        DELETE FROM mb_user_relation WHERE id = #{id};
+    </delete>
+
+    <!--按主键取记录-->
+    <select id = "selectPk" parameterType="java.lang.Long" resultType="com.blog.model.UserRelation">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_relation
+        WHERE id = #{id}
+    </select>
+
+    <select id="selectFollow" parameterType="com.blog.model.UserRelation" resultType="java.util.Map">
+        SELECT u.*, r.id rid
+        FROM (SELECT id, uid, worship_id, CASE WHEN uid=#{uid} THEN 2 WHEN worship_id=#{uid} THEN 1 END type
+                  FROM mb_user_relation
+                  WHERE uid=#{uid} OR worship_id=#{uid}) r, mb_user_info u
+        <where>
+            <if test="type == 2">
+                r.worship_id=u.id AND r.type=#{type};
+            </if>
+            <if test="type == 1">
+                r.uid=u.id AND r.type=#{type};
+            </if>
+        </where>
+    </select>
+
+    <!--所有记录-->
+    <select id="select" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_relation
+    </select>
+
+    <!--所有记录-->
+    <select id="selectParam" parameterType="java.util.Map" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_user_relation
+        <where>
+            <if test="id != null"> id = #{id}</if>
+            <if test="uid != null"> uid = #{uid}</if>
+            <if test="type != null">type = #{type}</if>
+            <if test="worship_id != null"> worship_id = #{worship_id}</if>
+            <if test="birth != null"> birth = #{birth}</if>
+            <if test="status != null">status = #{status}</if>
+            <if test="createDate != null">createDate = #{createDate}</if>
+            <if test="sex != null">sex = #{sex}</if>
+        </where>
+    </select>
+
+    <!--更新列表-->
+    <update id = "update" parameterType="com.blog.model.UserRelation">
+        UPDATE mb_user_relation
+        <set>
+            <if test="sex != null"> sex = #{sex},</if>
+            <if test="birth != null"> birth = #{birth},</if>
+            <if test="image != null">image = #{image},</if>
+            <if test="status != null">status = #{status}</if>
+        </set>
+        <where>
+            <if test="id != null">id=#{id}</if>
+        </where>
+    </update>
+
+
+
+</mapper>

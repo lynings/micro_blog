@@ -28,15 +28,13 @@ public class UserAuthenticateRealm extends AuthenticatingRealm {
         String password = new String(pChar);
         String ecodePassword = PasswordHelper.getEncryptPassword(username, password);
         UserInfo user = userInfoService.login(username, ecodePassword);
-        user = new UserInfo();
-        user.setUsername(username);
-        user.setPassword(ecodePassword);
         if (null == user) {
             throw new UnknownAccountException();//没找到帐号
         }
 
         this.setSession(username, user);
         this.setSession("username",user.getUsername());
+        this.setSession("id",user.getId());
         AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(
                 username,
                 ecodePassword,

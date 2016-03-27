@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.MessageDAO">
+
+    <sql id="tableProperty">
+        mb_message.id as id,
+        mb_message.uid as uid,
+        mb_message.content as content,
+        mb_message.images as images,
+        mb_message.create_date as createDate
+    </sql>
+
+    <!--增加-->
+    <insert id="insert" parameterType="com.blog.model.Message" useGeneratedKeys="true">
+        INSERT INTO mb_message (uid, content, images) VALUES (#{uid}, #{content}, #{images});
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        DELETE FROM mb_message WHERE id = #{id};
+    </delete>
+
+    <!--按主键取记录-->
+    <select id="selectById" parameterType="java.lang.Long" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>,
+        mr.type type, COUNT(mr.sid) quantity
+        FROM mb_message, mb_message_relation mr
+        WHERE mb_message.id=mr.mid
+        GROUP BY mr.type;
+        WHERE id = #{id}
+    </select>
+
+    <!--所有记录-->
+    <select id="list" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>,
+        mr.type type, COUNT(mr.sid) quantity
+        FROM mb_message, mb_message_relation mr
+        WHERE mb_message.id=mr.mid
+        GROUP BY mr.type;
+    </select>
+
+    <!--所有记录-->
+    <select id="selectParam" parameterType="java.util.Map" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>,
+        mr.type type, COUNT(mr.sid) quantity
+        FROM mb_message, mb_message_relation mr
+        GROUP BY mr.type
+        WHERE mb_message.id=mr.mid
+        <where>
+            <if test="id != null">AND id = #{id}</if>
+            <if test="uid != null">AND uid = #{uid}</if>
+            <if test="content != null">AND content = #{content}</if>
+            <if test="images != null">AND images = #{images}</if>
+            <if test="create_date != null">AND create_date = #{createDate}</if>
+        </where>
+    </select>
+
+    <!--更新列表-->
+    <update id = "update" parameterType="com.blog.model.Message">
+        UPDATE mb_message
+        <set>
+            <if test="content != null"> content = #{content}</if>
+        </set>
+        <where>
+            <if test="id != null">id=#{id}</if>
+        </where>
+    </update>
+
+</mapper>

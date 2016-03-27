@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -40,5 +41,42 @@ public class UserInfoServiceImpl implements UserInfoService {
             return -1;
         }
     }
+
+    @Override
+    public List<Map<String,Object>> getUserDetailInfo(Long id) {
+
+        return userInfoDAO.selectUserDetailInfo(id);
+    }
+
+    @Override
+    public List<Map<String,Object>> getUserMessage(Long id) {
+
+        return userInfoDAO.selectUserMessage(id);
+    }
+
+    @Override
+    public List<Map<String,Object>> getRecommend(Long id) {
+
+        return userInfoDAO.selectRecommend(id);
+    }
+
+    @Override
+    public UserInfo getUserInfo(Long id) {
+
+        return userInfoDAO.selectPk(id);
+    }
+
+    @Override
+    public int uploadImage(UserInfo userInfo) {
+
+        return userInfoDAO.updateImage(userInfo);
+    }
+
+    @Override
+    public List<Map<String, Object>> getOnlyUserMessage(Long id) {
+
+        return userInfoDAO.selectOnlyUserMessage(id);
+    }
+
 
 }

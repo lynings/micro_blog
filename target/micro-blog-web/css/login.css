@@ -1,0 +1,51 @@
+body {
+    padding-bottom: 40px;
+    background-color: #ffffff;
+}
+
+.form-signin {
+    width: 500px;
+    padding: 15px;
+    margin-left: 8px;
+    float: left;
+}
+
+.form-signin .form-control {
+    position: relative;
+    font-size: 16px;
+    height: auto;
+    width: 92%;
+    padding: 8px;
+    border: 1px solid #d3d3d3;
+    margin-top: 12px;
+    -webkit-border-radius: 4px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.login_button {
+    border: 0 solid #000000;
+    background-color: #85bd4e;
+    padding: 20px;
+    -webkit-border-radius: 5px;
+    margin-top: 13px;
+}
+
+.title {
+    color: #1e7dbd;
+    margin-left: 24px
+}
+
+.input_left {
+    float: left;
+    width: 20%;
+    height: 100%;
+}
+
+.input_right {
+    float: left;
+    width: 80%;
+    height: 100%;
+}

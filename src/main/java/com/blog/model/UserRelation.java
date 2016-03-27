@@ -11,7 +11,7 @@ public class UserRelation implements java.io.Serializable {
     private Long id;
     private Long uid;               // 用户表Id
     private Integer type;           // 类型(1:粉丝; 2:关注)
-    private Long[] worshop_id;      // 崇拜者ID
+    private Long worship_id;      // 崇拜者ID
 
     public Long getId() {
         return id;
@@ -37,11 +37,11 @@ public class UserRelation implements java.io.Serializable {
         this.type = type;
     }
 
-    public Long[] getWorshop_id() {
-        return worshop_id;
+    public Long getWorship_id() {
+        return worship_id;
     }
 
-    public void setWorshop_id(Long[] worshop_id) {
-        this.worshop_id = worshop_id;
+    public void setWorship_id(Long worship_id) {
+        this.worship_id = worship_id;
     }
 }

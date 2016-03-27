@@ -1,0 +1,63 @@
+
+<style type="text/css">
+    .col-lg-10 {
+        margin-top: 5px;
+    }
+    .btn-primary {
+        width: 100%;
+        color: #999;
+         background-color: #fff;
+        border-color: #ccc;
+    }
+    .user-container {
+        width: 50%;
+        margin: auto;
+        margin-top: 100px;
+    }
+</style>
+<div style="text-align: center;">
+<form action="#" method="post">
+    <div class="user-container">
+        <div><h3>个人信息</h3></div>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon">昵称</span>
+                    <input type="text" class="form-control" ng-model="user.name" placeholder="昵称" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon">邮箱</span>
+                    <input type="text" class="form-control" ng-model="user.username" placeholder="邮箱" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon">密码</span>
+                    <input type="password"ng-model="user.password" class="form-control" placeholder="密码" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon">确认密码</span>
+                    <input type="password" ng-model="user.confirmPassword" class="form-control" placeholder="确认密码" aria-describedby="basic-addon1">
+                </div>
+            </div>
+            <div class="col-lg-10">
+                <div class="input-group">
+                    <span class="input-group-addon">性别</span>
+                    <label class="btn btn-primary">
+                        <input type="radio" ng-model="user.sex" name="sex" id="option2" value="1" autocomplete="on"> 男
+                    </label>
+                    <label class="btn btn-primary">
+                        <input type="radio" ng-model="user.sex" name="sex" id="option3" value="2" autocomplete="on"> 女
+                    </label>
+                </div>
+            </div>
+        <div class="col-lg-10" style="margin-top: 20px">
+            <button type="button" class="btn btn-primary btn-sm" style="height: 50px;">提交</button>
+        </div>
+        </div>
+
+    </form>
+</div>

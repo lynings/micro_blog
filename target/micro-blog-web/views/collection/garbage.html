@@ -1,0 +1,78 @@
+<link href="css/custom/garbage.css" rel="stylesheet"/>
+<div id="outer-container">
+    <div id="context-container">
+        <h3>垃圾统计</h3>
+        <div id="topNav">
+            <button class="btn btn-success" id="data" type="button">数据</button><button class="btn btn-default" id="graph" type="button">图表</button>
+        </div>
+        <!-- 数据 -->
+        <div class="main-container" id="data-container">
+            <div class="data-bottom-list">
+                <div id="reportrange" class="pull-right">
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
+                    <span id="dateTime"></span> <b class="caret"></b>
+                </div>
+                <button class="btn btn-success" id="search" type="button">筛选</button>
+                <button class="btn btn-success" id="excel" type="button">导出</button>
+            </div>
+            <div id="table-head"><span class="glyphicon glyphicon-book" aria-hidden="true" style="margin: 0 8px;"></span>统计列表</div>
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <td>收运日期</td>
+                        <td>上报量</td>
+                        <td>实际量</td>
+                        <td>收运车</td>
+                        <td>收运人</td>
+                        <td>收运时长(min)</td>
+                        <td>异常数</td>
+                    </tr>
+                    </thead>
+                    <tbody id="dataContainer">
+                    </tbody>
+                </table>
+            </div>
+            <div id="pagination"> </div>
+        </div>
+
+        <!-- 图表 -->
+        <div class="main-container" id="graph-container" style="display: none;">
+            <div class="graph-bottom-list">
+                <div class="left-bottom">
+                    <li class="exception-tip tip"></li>
+                    <li>异常</li>
+                    <li class="today-tip tip"></li>
+                    <li>今天</li>
+                </div>
+                <div id="date-bottom">
+                    <li class="btn btn-success" id="day">日</li><li class="btn btn-default" id="month">月</li><li class="btn btn-default" id="year">年</li>
+                    <li class="btn btn-default" id="onDay">今天</li>
+                </div>
+                <div id="dater">
+                    <li><img src="images/left-jiantou.png" class="left-arrow"/></li>
+                    <li id="yearMonth">2016-01</li>
+                    <li><img src="images/right-jiantou.png" class="right-arrow"/></li>
+                </div>
+            </div>
+            <div id="graph-context">
+                <table class="table" style="border: 1px solid #ddd;">
+                    <thead id="graphHead">
+                    <tr>
+                        <td>日</td>
+                        <td>一</td>
+                        <td>二</td>
+                        <td>三</td>
+                        <td>四</td>
+                        <td>五</td>
+                        <td>六</td>
+                    </tr>
+                    </thead>
+                    <tbody id="graphBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

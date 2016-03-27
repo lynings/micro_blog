@@ -1,0 +1,24 @@
+<div class="panel-body">
+    <div class="row">
+        <div class="col-lg-12" style="margin-bottom: 12px;">
+            <div id="map" style="height:600px; ">
+                <div class='opacity80'
+                     style="width: 250px;height: 120px;background-color: #ffffff;position: absolute; right:10px; top:10px;z-index: 100000;">
+                    <button type="button" class="close" ng-click="hideVehicleStatus()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <ul style="margin-left:10px;line-height: 25px;" class="list-unstyled">
+                        <li style="margin-top: 15px;">预计到达时间：{{predictInfo.arriveTime}}</li>
+                        <li>驾驶员：{{predictInfo.name}}</li>
+                        <li>车牌号：{{predictInfo.plate_number}}</li>
+                    </ul>
+                </div>
+
+                <div class='opacity80'
+                     style="width: 50px;height: 50px;background-color: #ffffff;position: absolute; left:10px; bottom:10px;z-index: 100000;">
+                    <img src="/web/images/machine_point.png" style="cursor: pointer;" ng-click="myLocation()">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

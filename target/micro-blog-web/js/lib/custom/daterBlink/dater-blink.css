@@ -1,0 +1,272 @@
+/* recycle restaurant index page css style */
+body, .global-box, .global-top-bar, .global-bottom-bar, ul, li {
+	margin: 0;
+	padding: 0;
+}
+
+ul li {
+	list-style: none;
+}
+
+body {
+	text-align: center;
+	font-family: "宋体", "sans-serif";
+	background: #fff;
+	font: 1.8em "SimSun","宋体","Arial Narrow",HELVETICA;
+}
+
+div {
+	border: 0px solid black;
+}
+.btn {
+	cursor: pointer;
+}
+.global-box {
+	/*width: 640px;*/
+	margin: auto;
+	border: 1px solid #d9d9d9;
+}
+/* top bar start */
+.global-top-bar, .global-bottom-bar {
+	background: #83Be46;
+}
+
+.top-bar-title {
+	padding: 2% 0;
+}
+
+.top-bar-title {
+	color: #fff;
+	font-size: 2em;
+}
+/* top bar end */
+
+/* main content start */
+#year, #data{
+	border-radius: 1em 0 0 1em;
+}
+
+#day, #graph{
+	border-radius: 0 1em 1em 0;
+}
+
+.date-container > .date-btn {
+	float: right;
+	font-size: 1.6em;
+	cursor: pointer;
+}
+
+.date-active {
+	color: #fff;
+	background: #a4a6a1;
+}
+
+.date-default {
+	color: #989b92;
+	background-color: #e6e8e3;
+}
+
+.date-default:hover, .date-default:active {
+	color: #fff;
+	background: #babcbc;
+}
+
+.date-container{
+	height: 30px;
+	padding: 20px;
+}
+
+.date-container > div {
+	width: 10%;
+	padding: 3px 0;
+	display: inline-block;
+}
+
+.date-btn-container {
+	height: 60px;
+	margin: auto;
+	display: inline-block;
+}
+
+.date-btn-container li {
+	float: left;
+	margin: 10px;
+}
+
+.dater {
+	color: #71815b;
+	font-size: 55px;
+}
+
+.main {
+	width: 90%;
+	margin: auto
+}
+
+.main-container {
+	background: #f7f9f4;
+	/*text-align: left;*/
+}
+
+.main-outer-box {
+	margin-top: 2%;
+}
+
+.main-container ul {
+	padding: 18px;
+}
+
+.main-container table tr {
+	cursor: pointer;
+}
+
+.custom-hide {
+	display: none;
+}
+
+ul .date-box {
+	margin: 1.3%;
+	/*border: 2px solid #fff;*/
+	display: inline-block;
+	/*float: left;*/
+	border-radius: .3em;
+	background: #fff;
+	cursor: pointer;
+	width: 21%;
+	text-align: center;
+}
+
+/*ul .date-box:hover, ul .date-box:active {*/
+	/*border-radius: .4em;*/
+	/*border: 2px solid #48a46d;*/
+/*}*/
+
+ul .day-head {
+	width: 10.8%;
+	margin: 1%;
+	display: inline-block;
+	/*float: left;*/
+	text-align: center;
+}
+
+.day-box {
+	margin: 1%;
+	display: inline-block;
+	/*float: left;*/
+	border-radius: .3em;
+	background: #fff;
+	cursor: pointer;
+	width: 10.8%;
+	text-align: center;
+}
+
+.day-box-other {
+	opacity: 0.4;
+}
+
+.day-box-warming {
+	background: #fac1ae;
+	border: 2px solid #fac1ae;
+}
+
+.main table{
+	border-collapse: separate;
+	border-spacing: 10px;
+}
+
+.text {
+	color: #8ea273;
+}
+
+.month-text {
+	color: #479437;
+	text-align: right;
+}
+
+.top-graph {
+	margin: 3px 0;
+	background: #48a570;
+}
+
+.below-graph {
+	background: #83b999;
+}
+
+.graph-info {
+	height: 25px;
+}
+
+.info-date {
+	padding: 15%;
+	color: #4da774;
+}
+
+.info-date-warming {
+	padding: 15%;
+	color: #ffffff;
+}
+
+.on-date {
+	color: #9aa48c;
+}
+
+.info-data {
+	color: #fff;
+	font-weight: bold;
+	background: #48a46d;
+	padding: 3px 0;
+	border-radius: 0 0 .3em .3em;
+}
+
+.info-data-warming {
+	color: #ffffff;
+	font-weight: bold;
+	background: #f29898;
+	padding: 3px 0;
+	border-radius: 0 0 .3em .3em;
+}
+/* main content end */
+
+/* bottom bar start */
+.global-bottom-bar {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	padding: 8px 0;
+	opacity: .9;
+}
+
+.data-graph-box {
+	width: 230px;
+	margin: auto;
+}
+
+.data-graph-box .dg-btn {
+	float: left;
+	padding: 12%;
+	cursor: pointer;
+}
+
+.dg-active {
+	color: #86BE4C;
+	background: #FEFEFE;
+}
+
+.dg-default{
+	color: #fff;
+	background: #80AA56;
+}
+
+.global-bottom-bar .box {
+	cursor: pointer;
+}
+/* bottom bar end */
+
+.weight {
+	color: #a6bc8a;
+	background: #FEFEFE;
+	text-align: left;
+}
+
+
+

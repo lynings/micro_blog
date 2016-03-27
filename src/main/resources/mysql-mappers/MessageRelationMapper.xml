@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.blog.dao.MessageRelationDAO">
+
+    <sql id="tableProperty">
+        mb_message_relation.id as id,
+        mb_message_relation.mid as mid,
+        mb_message_relation.sid as sid,
+        mb_message_relation.type as type,
+        mb_message_relation.status as status
+    </sql>
+
+    <!--增加-->
+    <insert id="insert" parameterType="com.blog.model.MessageRelation" useGeneratedKeys="true">
+        INSERT INTO mb_message_relation (mid, sid, type) VALUES (#{mid}, #{sid}, #{type});
+    </insert>
+
+    <delete id="delete" parameterType="java.lang.Long">
+        DELETE FROM mb_message_relation WHERE id = #{id};
+    </delete>
+
+    <!--所有记录-->
+    <select id="select" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_message_relation_relation;
+    </select>
+
+    <!--所有记录-->
+    <select id="selectParam" parameterType="java.util.Map" resultType="java.util.List">
+        SELECT
+        <include refid = "tableProperty"/>
+        FROM mb_message_relation_relation
+        <where>
+            <if test="id != null"> id = #{id}</if>
+            <if test="mid != null"> mid = #{mid}</if>
+            <if test="sid != null">sid = #{sid}</if>
+            <if test="type != null"> type = #{type}</if>
+            <if test="status != null"> status = #{status}</if>
+        </where>
+        GROUP BY type;
+    </select>
+
+    <!--更新列表-->
+    <update id = "update" parameterType="com.blog.model.MessageRelation">
+        UPDATE mb_message_relation
+        <set>
+            <if test="status != null"> status = #{status}</if>
+        </set>
+        <where>
+            <if test="id != null">id=#{id}</if>
+        </where>
+    </update>
+
+
+
+</mapper>
